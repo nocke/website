@@ -599,8 +599,9 @@ Upgrading with Mocha:
 
 ```diff
 - mocha --compilers js:babel-core/register
-+ mocha --compilers js:@babel/register
++ mocha --require @babel/register
 ```
+Note, that [--compilers is deprecated by Mocha.](https://github.com/mochajs/mocha/wiki/compilers-deprecation)
 
 `@babel/register` will also now only compile files in the current working directly (was done to fix issues with symlinking).
 
